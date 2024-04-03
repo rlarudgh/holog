@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
-    "eslint": "eslint ."
+    "eslint": "eslint . --ext .tsx"
   },
   "dependencies": {
     "axios": "^1.6.8",
@@ -43,9 +43,9 @@
     "typescript": "*"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "prettier --write",
-      "eslint --fix"
+    "./src/*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
     ]
   },
   "packageManager": "yarn@4.1.1"
