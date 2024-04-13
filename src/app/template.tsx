@@ -1,13 +1,14 @@
-import '@/shared/styles/globals.css';
+'use client';
+
 import type { ReactNode } from 'react';
-import { RootLayout } from '@/widgets';
+import { RecoilRoot } from 'recoil';
 
 interface Props {
   children: ReactNode;
 }
 
 const Template = ({ children }: Readonly<Props>) => {
-  return <RootLayout>{children}</RootLayout>;
+  return <RecoilRoot>{children}</RecoilRoot>;
 };
 
 export default Template;
